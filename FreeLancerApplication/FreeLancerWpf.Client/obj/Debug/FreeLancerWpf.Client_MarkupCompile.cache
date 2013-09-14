@@ -4,26 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\
+C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\
 FreeLancerWpf.Client
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\App.xaml
-32134352249
-
-19-1523172682
-16-291680341
-MainWindow.xaml;Views\HomePageView.xaml;Views\LoginResiterFormView.xaml;
-=======
 C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\App.xaml
 3-1715906045
 
 201484593568
 161130923885
 MainWindow.xaml;Views\HomePageView.xaml;Views\LoginRegisterFormView.xaml;
->>>>>>> Fix main window
 
 False
 
