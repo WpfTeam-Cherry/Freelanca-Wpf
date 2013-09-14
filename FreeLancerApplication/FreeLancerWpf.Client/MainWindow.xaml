@@ -1,23 +1,25 @@
-﻿<Window x:Class="FreeLancerWpf.Client.MainWindow"
+﻿<Window xmlns:Views="clr-namespace:FreeLancerWpf.Client.Views"  x:Class="FreeLancerWpf.Client.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ViewModel="clr-namespace:FreeLancerWpf.Client.ViewModels"
+        xmlns:converters="clr-namespace:FreeLancerWpf.Client.Converter"
         Title="MainWindow" Height="350" Width="525">
-    
-    <Window.DataContext>
-        <ViewModel:AppViewModel />
+
+        <!--<Window.DataContext>
+            <ViewModel:AppViewModel />
         </Window.DataContext>
         <Window.Resources>
             <DataTemplate            
-            DataType="{x:Type ViewModel:LoginRegisterFormViewModel}">
+            DataType="{x:Type ViewModel:LoginRegisterFormView}">
                 <Views:LoginRegisterFormView/>
             </DataTemplate>
-            <DataTemplate DataType="{x:Type ViewModel:TodoListsViewModel}">
-                <Views:TodolistsView/>
+            <DataTemplate DataType="{x:Type ViewModel:HomePageView}">
+                <Views:HomePageView/>
             </DataTemplate>
             <converters:BoolToVisibilityConverter x:Key="boolToVisibilityConverter"/>
-        </Window.Resources>
+        </Window.Resources>-->
         <Grid>
-            <DockPanel>
+            <!--<DockPanel>
                 <StackPanel Name="HeaderContainer"
                         Visibility="{Binding Path=LoggedInUser,Converter={StaticResource boolToVisibilityConverter}}"
                         DockPanel.Dock="Top">
@@ -41,6 +43,6 @@
                 <ContentControl DockPanel.Dock="Bottom"            
                             Content="{Binding CurrentViewModel}" />
 
-            </DockPanel>
+            </DockPanel>-->
         </Grid>
 </Window>

@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace FreeLancerWpf.Client.Data
 {
-    class HttpRequester
+    public class HttpRequester
     {
         public static T Get<T>(string resourceUrl, IDictionary<string, string> headers = null)
         {

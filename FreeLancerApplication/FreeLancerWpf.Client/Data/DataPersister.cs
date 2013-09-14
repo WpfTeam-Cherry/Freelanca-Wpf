@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,9 +25,9 @@ namespace FreeLancerWpf.Client.Data
             string phone, string location, string authenticationCode)
             
         {
-            this.ValidateUsername(username);
-            this.ValidateEmail(email);
-            this.ValidateAuthCode(authenticationCode);
+            ValidateUsername(username);
+            ValidateEmail(email);
+            ValidateAuthCode(authenticationCode);
 
             var userModel = new UserModel()
             {
@@ -43,8 +44,8 @@ namespace FreeLancerWpf.Client.Data
 
         internal static string LoginUser(string username, string authenticationCode)
         {
-            this.ValidateUsername(username);
-            this.ValidateAuthCode(authenticationCode);
+            ValidateUsername(username);
+            ValidateAuthCode(authenticationCode);
 
             var userModel = new UserModel()
             {
@@ -73,7 +74,7 @@ namespace FreeLancerWpf.Client.Data
             HttpRequester.Put(BaseServicesUrl + "todos/" + todoId, headers);
         }
 
-        private void ValidateEmail(string email)
+        private static void ValidateEmail(string email)
         {
             try
             {
@@ -85,17 +86,17 @@ namespace FreeLancerWpf.Client.Data
             }
         }
 
-        private void ValidateUser(UserModel userModel)
+        private static void ValidateUser(UserModel userModel)
         {
             if (userModel == null)
             {
                 throw new FormatException("Username and/or password are invalid");
             }
-            this.ValidateUsername(userModel.Username);
-            this.ValidateAuthCode(userModel.AuthCode);
+            ValidateUsername(userModel.Username);
+            ValidateAuthCode(userModel.AuthCode);
         }
 
-        private void ValidateAuthCode(string authCode)
+        private static void ValidateAuthCode(string authCode)
         {
             if (string.IsNullOrEmpty(authCode) || authCode.Length != AuthenticationCodeLength)
             {
@@ -103,7 +104,7 @@ namespace FreeLancerWpf.Client.Data
             }
         }
 
-        private void ValidateUsername(string username)
+        public static void ValidateUsername(string username)
         {
             if (username.Length < MinUsernameLength || MaxUsernameLength < username.Length)
             {

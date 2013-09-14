@@ -2,7 +2,7 @@
 
 namespace FreeLancerWpf.Client.Helpers
 {
-    class LoginSuccessArgs:EventArgs
+    public class LoginSuccessArgs:EventArgs
     {
         public string Username { get; set; }
 

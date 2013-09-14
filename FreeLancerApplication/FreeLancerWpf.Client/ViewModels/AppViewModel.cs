@@ -93,7 +93,7 @@ namespace FreeLancerWpf.Client.ViewModels
         public AppViewModel()
         {
             this.ViewModels = new List<IPageViewModel>();
-            this.ViewModels.Add(new TodoListsViewModel());
+            //this.ViewModels.Add(new TodoListsViewModel());
             var loginVM = new LoginRegisterFormViewModel();
             loginVM.LoginSuccess += this.LoginSuccessful;
             this.LoginRegisterVM = loginVM;

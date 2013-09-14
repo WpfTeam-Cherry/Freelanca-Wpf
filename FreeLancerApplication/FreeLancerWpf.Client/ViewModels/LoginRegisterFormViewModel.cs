@@ -11,7 +11,7 @@ using FreeLancerWpf.Client.Behavior;
 
 namespace FreeLancerWpf.Client.ViewModels
 {
-    class LoginRegisterFormViewModel: ViewModelBase, IPageViewModel
+    public class LoginRegisterFormViewModel: ViewModelBase, IPageViewModel
     {
         private string message;
         private ICommand loginCommand;
