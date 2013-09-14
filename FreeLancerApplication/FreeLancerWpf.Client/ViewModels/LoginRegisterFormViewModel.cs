@@ -27,6 +27,8 @@ namespace FreeLancerWpf.Client.ViewModels
 
         public string Username { get; set; }
         public string DisplayName { get; set; }
+        public string Phone { get; set; }
+        public string Location { get; set; }
 
         public string Email { get; set; }
 
@@ -87,7 +89,7 @@ namespace FreeLancerWpf.Client.ViewModels
 
             var authenticationCode = this.GetSHA1HashData(password);
 
-            DataPersister.RegisterUser(this.Username, this.Email, authenticationCode);
+            DataPersister.RegisterUser(this.Username, this.DisplayName, this.Email,this.Phone, this.Location  , authenticationCode);
             this.HandleLoginCommand(parameter);
         }
 

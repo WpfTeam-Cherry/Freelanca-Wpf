@@ -9,10 +9,11 @@ namespace FreeLancerWpf.Client.Data
     public class DataPersister
     {
         protected static string AccessToken { get; set; }
-
+        //TODO change BaseServiceUrl
         private const string BaseServicesUrl = "http://localhost:16183/api/";
 
-        internal static void RegisterUser(string username, string email, string authenticationCode)
+        internal static void RegisterUser(string username, string displayName,string email,string phone, string location, string authenticationCode)
+            
         {
             //Validation!!!!!
             //validate username
@@ -22,7 +23,10 @@ namespace FreeLancerWpf.Client.Data
             var userModel = new UserModel()
             {
                 Username = username,
+                DisplayName=displayName,
                 Email = email,
+                Phone=phone,
+                Location=location,
                 AuthCode = authenticationCode
             };
             HttpRequester.Post(BaseServicesUrl + "users/register",
