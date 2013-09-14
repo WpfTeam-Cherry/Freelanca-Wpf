@@ -42,3 +42,6 @@ C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf
 C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\Views\LoginRegisterFormView.g.cs
 C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\Views\LoginRegisterFormView.baml
 >>>>>>> Fix main window
+C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\Views\LoginRegisterFormView.g.cs
+C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\Views\LoginRegisterFormView.baml

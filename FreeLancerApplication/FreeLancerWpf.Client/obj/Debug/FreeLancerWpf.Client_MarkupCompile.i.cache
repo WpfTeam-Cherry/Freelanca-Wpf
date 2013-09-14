@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\
+C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\
 FreeLancerWpf.Client
 none
 false
 DEBUG;TRACE
-C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\App.xaml
+C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\App.xaml
 3-1715906045
 
-24615028745
-161130923885
+24399544139
+16-291680341
 MainWindow.xaml;Views\HomePageView.xaml;Views\LoginRegisterFormView.xaml;
 
-False
+True
 

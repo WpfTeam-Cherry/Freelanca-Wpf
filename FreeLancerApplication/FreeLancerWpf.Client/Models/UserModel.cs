@@ -7,25 +7,25 @@ using System.Threading.Tasks;
 
 namespace FreeLancerWpf.Client.Models
 {
-    [DataContract]
+    //[DataContract]
     public class UserModel
     {
-        [DataMember(Name = "username")]
+        //[DataMember(Name = "username")]
         public string Username { get; set; }
 
-        [DataMember(Name = "authCode")]
+        //[DataMember(Name = "authCode")]
         public string AuthCode { get; set; }
 
-        [DataMember(Name = "email")]
-        public string Email { get; set; }
+        //[DataMember(Name = "email")]
+        public string Mail { get; set; }
 
-        [DataMember(Name = "displayName")]
+        //[DataMember(Name = "displayName")]
         public string DisplayName { get; set; }
 
-        [DataMember(Name="location")]
+        //[DataMember(Name = "location")]
         public string Location { get; set; }
 
-        [DataMember(Name="phoneNumber")]
+        //[DataMember(Name = "phone")]
         public string Phone { get; set; }
     }
 }
