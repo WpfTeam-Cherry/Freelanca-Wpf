@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     
-    <<Window.DataContext>
+    <Window.DataContext>
         <ViewModel:AppViewModel />
         </Window.DataContext>
         <Window.Resources>
