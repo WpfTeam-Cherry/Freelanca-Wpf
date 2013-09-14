@@ -8,6 +8,13 @@ namespace FreeLancerWpf.Client.Data
 {
     public class DataPersister
     {
+        private const int TokenLength = 50;
+        private const string TokenChars = "qwertyuiopasdfghjklmnbvcxzQWERTYUIOPLKJHGFDSAZXCVBNM";
+        private const int MinUsernameLength = 6;
+        private const int MaxUsernameLength = 30;
+        private const int AuthenticationCodeLength = 40;
+        private const string ValidUsernameChars = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890_.@";
+
         protected static string AccessToken { get; set; }
         //TODO change BaseServiceUrl
         private const string BaseServicesUrl = "http://localhost:16183/api/";

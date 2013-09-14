@@ -26,6 +26,6 @@ namespace FreeLancerWpf.Client.Models
         public string Location { get; set; }
 
         [DataMember(Name="phoneNumber")]
-        public string PhoneNumber { get; set; }
+        public string Phone { get; set; }
     }
 }
