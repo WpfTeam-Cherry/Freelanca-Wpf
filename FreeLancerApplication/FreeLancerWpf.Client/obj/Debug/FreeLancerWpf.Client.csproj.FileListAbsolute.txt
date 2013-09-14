@@ -8,3 +8,10 @@ C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.
 C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\FreeLancerWpf.Client.g.resources
 C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\FreeLancerWpf.Client.Properties.Resources.resources
 C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\FreeLancerWpf.Client.csproj.GenerateResource.Cache
+C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\FreeLancerWpf.Client.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\MainWindow.baml
+C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\MainWindow.g.cs
+C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\Views\LoginResiterFormView.g.cs
+C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\App.g.cs
+C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\FreeLancerWpf.Client_MarkupCompile.cache
+C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\FreeLancerWpf.Client_MarkupCompile.lref

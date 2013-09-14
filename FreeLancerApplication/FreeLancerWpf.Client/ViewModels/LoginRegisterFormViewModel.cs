@@ -89,7 +89,7 @@ namespace FreeLancerWpf.Client.ViewModels
 
             var authenticationCode = this.GetSHA1HashData(password);
 
-            DataPersister.RegisterUser(this.Username, this.DisplayName, this.Email,this.Phone, this.Location  , authenticationCode);
+            DataPersister.RegisterUser(this.Username, this.DisplayName, this.Email,this.Phone, this.Location, authenticationCode);
             this.HandleLoginCommand(parameter);
         }
 
