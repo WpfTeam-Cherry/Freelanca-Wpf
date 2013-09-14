@@ -15,3 +15,7 @@ C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf
 C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\App.g.cs
 C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\FreeLancerWpf.Client_MarkupCompile.cache
 C:\Users\user\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\FreeLancerWpf.Client_MarkupCompile.lref
+C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\Views\HomePageView.baml
+C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\Views\HomePageView.g.cs
+C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\Views\LoginResiterFormView.g.cs
+C:\Users\usr\Documents\GitHub\Freelanca-Wpf\FreeLancerApplication\FreeLancerWpf.Client\obj\Debug\FreeLancerWpf.Client_MarkupCompile.lref

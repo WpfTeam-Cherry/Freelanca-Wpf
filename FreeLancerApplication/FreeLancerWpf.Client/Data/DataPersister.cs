@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FreeLancerWpf.Client.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,21 +20,21 @@ namespace FreeLancerWpf.Client.Data
         //TODO change BaseServiceUrl
         private const string BaseServicesUrl = "http://localhost:16183/api/";
 
-        internal static void RegisterUser(string username, string displayName,string email,string phone, string location, string authenticationCode)
+        internal static void RegisterUser(string username, string displayName, string email, 
+            string phone, string location, string authenticationCode)
             
         {
-            //Validation!!!!!
-            //validate username
-            //validate email
-            //validate authentication code
-            //use validation from WebAPI
+            this.ValidateUsername(username);
+            this.ValidateEmail(email);
+            this.ValidateAuthCode(authenticationCode);
+
             var userModel = new UserModel()
             {
                 Username = username,
-                DisplayName=displayName,
+                DisplayName = displayName,
                 Email = email,
-                Phone=phone,
-                Location=location,
+                Phone = phone,
+                Location = location,
                 AuthCode = authenticationCode
             };
             HttpRequester.Post(BaseServicesUrl + "users/register",
@@ -42,11 +43,9 @@ namespace FreeLancerWpf.Client.Data
 
         internal static string LoginUser(string username, string authenticationCode)
         {
-            //Validation!!!!!
-            //validate username
-            //validate email
-            //validate authentication code
-            //use validation from WebAPI
+            this.ValidateUsername(username);
+            this.ValidateAuthCode(authenticationCode);
+
             var userModel = new UserModel()
             {
                 Username = username,
@@ -66,52 +65,57 @@ namespace FreeLancerWpf.Client.Data
             return isLogoutSuccessful;
         }
 
-        internal static void CreateNewTodosList(string title, IEnumerable<TodoViewModel> todos)
-        {
-            var listModel = new TodolistModel()
-            {
-                Title = title,
-                Todos = todos.Select(t => new TodoModel()
-                {
-                    Text = t.Text
-                })
-            };
-
-            var headers = new Dictionary<string, string>();
-            headers["X-accessToken"] = AccessToken;
-
-            var response =
-                HttpRequester.Post<ListCreatedModel>(BaseServicesUrl + "lists", listModel, headers);
-        }
-
-        internal static IEnumerable<TodoListViewModel> GetTodoLists()
-        {
-            var headers = new Dictionary<string, string>();
-            headers["X-accessToken"] = AccessToken;
-
-            var todoListsModels =
-                HttpRequester.Get<IEnumerable<TodolistModel>>(BaseServicesUrl + "lists", headers);
-            return todoListsModels.
-                AsQueryable().
-                 Select(model => new TodoListViewModel()
-                 {
-                     Id = model.Id,
-                     Title = model.Title,
-                     Todos = model.Todos.AsQueryable().Select(todo => new TodoViewModel()
-                     {
-                         Id = todo.Id,
-                         Text = todo.Text,
-                         IsDone = todo.IsDone
-                     })
-                 });
-        }
-
         internal static void ChangeState(int todoId)
         {
             var headers = new Dictionary<string, string>();
             headers["X-accessToken"] = AccessToken;
 
             HttpRequester.Put(BaseServicesUrl + "todos/" + todoId, headers);
+        }
+
+        private void ValidateEmail(string email)
+        {
+            try
+            {
+                new MailAddress(email);
+            }
+            catch (FormatException ex)
+            {
+                throw new FormatException("Email is invalid", ex);
+            }
+        }
+
+        private void ValidateUser(UserModel userModel)
+        {
+            if (userModel == null)
+            {
+                throw new FormatException("Username and/or password are invalid");
+            }
+            this.ValidateUsername(userModel.Username);
+            this.ValidateAuthCode(userModel.AuthCode);
+        }
+
+        private void ValidateAuthCode(string authCode)
+        {
+            if (string.IsNullOrEmpty(authCode) || authCode.Length != AuthenticationCodeLength)
+            {
+                throw new FormatException("Password is invalid");
+            }
+        }
+
+        private void ValidateUsername(string username)
+        {
+            if (username.Length < MinUsernameLength || MaxUsernameLength < username.Length)
+            {
+                throw new FormatException(
+                    string.Format("Username must be between {0} and {1} characters",
+                        MinUsernameLength,
+                        MaxUsernameLength));
+            }
+            if (username.Any(ch => !ValidUsernameChars.Contains(ch)))
+            {
+                throw new FormatException("Username contains invalid characters");
+            }
         }
     }
 }
